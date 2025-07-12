@@ -39,7 +39,4 @@ A clean, professional, and responsive Employee Directory built with HTML, modula
 - Integrate persistent storage (localStorage or backend).
 - Perform accessibility audits for WCAG compliance.
 
-## Screenshots
-
-_Add screenshots of the dashboard, form, validation errors, and mobile view here._
 
