@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Directory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <header>
+    <h1>Employee Directory</h1>
+    <button id="addEmployeeBtn" class="primary-btn">+ Add Employee</button>
+    <input type="search" id="searchBar" placeholder="Search by name or email" aria-label="Search Employees">
+  </header>
+  <aside id="filterSidebar" aria-label="Filter Employees">
+    <h2>Filter</h2>
+    <input type="text" id="filterFirstName" placeholder="First Name">
+    <input type="text" id="filterDepartment" placeholder="Department">
+    <input type="text" id="filterRole" placeholder="Role">
+    <button id="applyFilter" class="secondary-btn">Apply</button>
+    <button id="resetFilter" class="secondary-btn">Reset</button>
+  </aside>
+  <main>
+    <div id="sortControls">
+      <select id="sortBy" aria-label="Sort By">
+        <option value="">Sort By</option>
+        <option value="firstName">First Name</option>
+        <option value="department">Department</option>
+      </select>
+      <select id="pagination" aria-label="Pagination">
+        <option value="10">Show 10</option>
+        <option value="25">Show 25</option>
+        <option value="50">Show 50</option>
+        <option value="100">Show 100</option>
+      </select>
+    </div>
+    <section id="employeeList"></section>
+  </main>
+  <div id="employeeFormModal" class="modal hidden" role="dialog" aria-modal="true">
+    <form id="employeeForm" novalidate>
+      <h2 id="formTitle">Add Employee</h2>
+      <label>
+        First Name
+        <input type="text" name="firstName" required>
+      </label>
+      <span class="error" id="errorFirstName"></span>
+      <label>
+        Last Name
+        <input type="text" name="lastName" required>
+      </label>
+      <span class="error" id="errorLastName"></span>
+      <label>
+        Email
+        <input type="email" name="email" required>
+      </label>
+      <span class="error" id="errorEmail"></span>
+      <label>
+        Department
+        <input type="text" name="department" required>
+      </label>
+      <span class="error" id="errorDepartment"></span>
+      <label>
+        Role
+        <input type="text" name="role" required>
+      </label>
+      <span class="error" id="errorRole"></span>
+      <div class="form-actions">
+        <button type="submit" class="primary-btn">Save</button>
+        <button type="button" id="cancelBtn" class="secondary-btn">Cancel</button>
+      </div>
+      <div id="formErrors" class="error-message"></div>
+    </form>
+  </div>
+  <div id="toast" class="toast hidden"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

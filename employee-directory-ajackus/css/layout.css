@@ -1,0 +1,39 @@
+header {
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+header input[type="search"] {
+  margin-left: 1rem;
+  width: 220px;
+}
+#filterSidebar {
+  background: #fff;
+  padding: 1.5rem 1rem;
+  width: 240px;
+  float: left;
+  min-height: 100vh;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.04);
+}
+main {
+  margin-left: 260px;
+  padding: 2rem 2rem;
+}
+#sortControls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 900px) {
+  #filterSidebar {
+    display: none;
+  }
+  main {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}
